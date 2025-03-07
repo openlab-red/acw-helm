@@ -1,11 +1,15 @@
-apiVersion: route.openshift.io/v1
 kind: Route
-name: tracing-ui
-namespace: tracing-system
-resource_definition:
-  spec:
-    port:
-      targetPort: jaeger-ui
-    to:
-      kind: Service
-      name: tempo-sample-query-frontend
+apiVersion: route.openshift.io/v1
+metadata:
+  name: tracing-ui
+  namespace: tracing-system
+spec:
+  path: /
+  to:
+    kind: Service
+    name: tempo-sample-query-frontend
+    weight: 100
+  port:
+    targetPort: jaeger-ui
+  tls:
+    termination: edge
