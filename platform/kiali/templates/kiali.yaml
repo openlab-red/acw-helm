@@ -42,7 +42,7 @@ spec:
     tracing:
       enabled: true
       in_cluster_url: "http://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16685"
-      url: ${JAEGERROUTE} 
+      url: {{ .Values.tracingroute}} 
       query_timeout: 60
       use_grpc: true
   installation_tag: "Kiali [istio-system]"
