@@ -2,3 +2,5 @@ nameOverride: "default"
 
 istio:
   version: v1.23.0
+
+tracingroute:
