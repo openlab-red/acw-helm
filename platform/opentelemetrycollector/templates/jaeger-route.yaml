@@ -1,0 +1,15 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: tracing-ui
+  namespace: opentelemetrycollector
+spec:
+  path: /
+  to:
+    kind: Service
+    name: tempo-sample-query-frontend
+    weight: 100
+  port:
+    targetPort: jaeger-ui
+  tls:
+    termination: edge
