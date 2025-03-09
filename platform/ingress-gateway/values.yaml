@@ -40,3 +40,4 @@ dns:
 registry:
   password:
   username:
+  dockerjson:
