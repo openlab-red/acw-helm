@@ -2,7 +2,7 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: travels-blue-ui
-  namespace: blue-portal
+  namespace: partner-blue-portal
 spec:
   path: /
   to:

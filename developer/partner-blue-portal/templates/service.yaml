@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: travels-demo-ui
-  namespace: blue-portal
+  namespace: partner-blue-portal
   labels:
     app: travels-demo-ui
 spec:
