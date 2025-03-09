@@ -1,0 +1,16 @@
+apiVersion: console.openshift.io/v1
+kind: ConsolePlugin
+metadata:
+  name: kuadrant-console-plugin
+  namespace: kuadrant-system
+spec:
+  backend:
+    service:
+      basePath: /
+      name: kuadrant-console-plugin
+      namespace: kuadrant-system
+      port: 9443
+    type: Service
+  displayName: Kuadrant Console Plugin
+  i18n:
+    loadType: ''
