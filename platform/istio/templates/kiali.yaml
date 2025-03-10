@@ -3,6 +3,8 @@ kind: Kiali
 metadata:
   name: kiali
   namespace: istio-system
+  annotations:
+    haproxy.router.openshift.io/timeout: 60s  
 spec:
   auth:
     strategy: openshift
