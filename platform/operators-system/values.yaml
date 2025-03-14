@@ -1,0 +1,9 @@
+replicaCount: 1
+
+kiali:
+  subscription:
+    channel: stable
+    installPlanApproval: Automatic
+    name: kiali-ossm
+    source: redhat-operators
+    sourceNamespace: openshift-marketplace
