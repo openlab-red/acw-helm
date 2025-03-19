@@ -30,11 +30,11 @@ spec:
             - name: WHOAMI
               value: blue
             - name: API_GET_CITIES
-              value: YOUR_API_URL
+              value: "{{ .Values.api.allcities }}"
             - name: API_GET_DETAILS_FOR_CITY
-              value: YOUR_API_URL
+              value: "{{ .Values.api.city }}"
             - name: API_USER_KEY_NAME
-              value: YOUR_API_KEY_NAME
+              value: "{{ .Values.api.keyname }}"
             - name: API_USER_KEY_VALUE
-              value: YOUR_API_KEY_VALUE
+              value: "{{ .Values.api.keyvalue }}"
           imagePullPolicy: IfNotPresent
