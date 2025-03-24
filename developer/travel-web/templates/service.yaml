@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: travels-demo-ui
-  namespace: travels-web
+  namespace: travel-web
   labels:
     app: travels-demo-ui
 spec:
