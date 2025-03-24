@@ -4,14 +4,6 @@ metadata:
   name: prod-web-dnspolicy
   namespace: ingress-gateway
 spec:
-  healthCheck:
-    failureThreshold: 3
-    interval: 1m
-    path: /health
-  loadBalancing:
-    defaultGeo: true
-    geo: GEO-NA
-    weight: 120
   targetRef:
     name: prod-web
     group: gateway.networking.k8s.io
