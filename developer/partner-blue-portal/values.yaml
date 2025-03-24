@@ -28,3 +28,4 @@ httpRoute:
 api:
   keyvalue: blue
   keyname: APIKEY
+  apiPrefix: api

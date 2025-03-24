@@ -30,9 +30,9 @@ spec:
             - name: WHOAMI
               value: blue
             - name: API_GET_CITIES
-              value: https://partners.{{ .Values.httpRoute.hostName }}/travels
+              value: https://{{ .Values.api.apiPrefix}}.{{ .Values.httpRoute.hostName }}/travels
             - name: API_GET_DETAILS_FOR_CITY
-              value: https://partners.{{ .Values.httpRoute.hostName }}/travels
+              value: https://{{.Values.api.apiPrefix}}.{{ .Values.httpRoute.hostName }}/travels
             - name: API_USER_KEY_NAME
               value: "{{ .Values.api.keyname }}"
             - name: API_USER_KEY_VALUE
