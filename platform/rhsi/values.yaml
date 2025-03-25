@@ -1,1 +1,5 @@
 replicaCount: 1
+
+
+travelDb:
+  namespace: travel-db
