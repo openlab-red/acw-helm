@@ -42,7 +42,7 @@ spec:
       enabled: true
       auth:
         ca_file: /var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
-        insecure_skip_verify: false
+        insecure_skip_verify: true
         type: bearer
         use_kiali_token: true
       query_timeout: 60
