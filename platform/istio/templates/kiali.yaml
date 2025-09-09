@@ -39,11 +39,18 @@ spec:
         enabled: true
       url: 'https://thanos-querier.openshift-monitoring.svc.cluster.local:9091'
     tracing:
-      enabled: false
-      in_cluster_url: "http://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16685"
-      url: "https://{{ .Values.tracingroute}}"
+      enabled: true
+      auth:
+        ca_file: /var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
+        insecure_skip_verify: false
+        type: bearer
+        use_kiali_token: true
       query_timeout: 60
-      use_grpc: true
+      internal_url: 'https:/tempo-sample-query-frontend.tracing-system.svc.cluster.local:8080/api/traces/v1/default/tempo'
+      provider: tempo
+      health_check_url: 'https://tempo-sample-query-frontend.tracing-system.svc.cluster.local/api/traces/v1/default/tempo/api/echo'
+      use_grpc: false
+      external_url: 'https://tempo-sample-query-frontend.tracing-system.svc.cluster.local/api/traces/v1/default/search'
   installation_tag: "Kiali [istio-system]"
   istio_namespace: istio-system
   server:
