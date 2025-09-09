@@ -1,4 +1,4 @@
-apiVersion: telemetry.istio.io/v1alpha1
+apiVersion: telemetry.istio.io/v1
 kind: Telemetry
 metadata:
   name: namespace-metrics
@@ -26,4 +26,7 @@ spec:
           value: "request.host"
         request_url_path:
           value: "request.url_path"
-
+  tracing:
+  - providers:
+    - name: otel
+    randomSamplingPercentage: 100
