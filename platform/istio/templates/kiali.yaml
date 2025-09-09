@@ -46,11 +46,11 @@ spec:
         type: bearer
         use_kiali_token: true
       query_timeout: 60
-      internal_url: 'https://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686/jaeger'
+      internal_url: 'http://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686'
       provider: jaeger
-      health_check_url: 'https://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686/api/services'
+      health_check_url: 'http://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686'
       use_grpc: false
-      external_url: 'https://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686'
+      external_url: 'http://tempo-sample-query-frontend.tracing-system.svc.cluster.local:16686'
   installation_tag: "Kiali [istio-system]"
   istio_namespace: istio-system
   server:
